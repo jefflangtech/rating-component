@@ -55,7 +55,26 @@ Then crop/optimize/edit your image however you like, add it to your project, and
 ### Step by step
 
 1. Initial setup (0:25)
-2. 
+2. Design system (0:17)
+3. Notes on the layout (0:34)
+
+**Notes**
+It looks like the overall layout of the widget is broken into 3 primary sections, and each one of them can be their own div. Perhaps one is the header, which will contain the request for feedback heading prior to submission, and then the confirmation image after submission. Then a message div, and the rating div.
+
+In the request state everything is either left aligned or spaced evenly, and the rating div can be flex. In the thank you state the content is centered.
+
+For mobile everything is sized down a little bit but the overall layout stays the same so it should be really straight-forward to make this work.
+
+![Layout Notes](./public/images/layout-notes.jpg)
+
+The star and the rating selectors, 1-5, exist inside the same type of circular container. The only difference would be that the rating selectors have a hover state and a selected state. It looks like the 'selected' state is supposed to be grey and the hover state is orange. I think what I might do is have an inactive class and an activated class, where the inactive class has a hover state while the activated class does not, and each one of those has the correct corresponding color schemes. Then, on click, its just a class toggle while the rating score itself can be stored elsewhere.
+
+As far as the form itself, I wonder if I just use an existing HTML structure with all the styling removed so that it exists behind the scenes? I think semantically that makes the most sense so I'll probably do radio buttons...yep I'm implementing that with a submit input as well.
+
+Let's see if any of this backfires later 😂
+
+
+
 
 To see how you can add code snippets, see below:
 
