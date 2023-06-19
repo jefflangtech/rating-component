@@ -65,7 +65,7 @@ In the request state everything is either left aligned or spaced evenly, and the
 
 For mobile everything is sized down a little bit but the overall layout stays the same so it should be really straight-forward to make this work.
 
-![Layout Notes](./public/images/layout-notes.jpg)
+![Layout Notes](public/images/layout-notes.jpg)
 
 The star and the rating selectors, 1-5, exist inside the same type of circular container. The only difference would be that the rating selectors have a hover state and a selected state. It looks like the 'selected' state is supposed to be grey and the hover state is orange. I think what I might do is have an inactive class and an activated class, where the inactive class has a hover state while the activated class does not, and each one of those has the correct corresponding color schemes. Then, on click, its just a class toggle while the rating score itself can be stored elsewhere.
 
