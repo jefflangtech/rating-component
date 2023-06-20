@@ -73,6 +73,9 @@ As far as the form itself, I wonder if I just use an existing HTML structure wit
 
 Let's see if any of this backfires later 😂
 
+4. Basic layout with styles (1:20)
+  - Planning this all out in advance worked so well. Also using an image overlay of the design as a layer to compare against (I just turned it off and on using a visibility rule) was critical to getting close to pixel perfect
+
 
 
 

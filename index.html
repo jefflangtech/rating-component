@@ -15,11 +15,47 @@
 <body>
   <img id="overlay" src="public/images/testing-overlay.png">
 
+  <main>
+    <div id="headline">
+      <div class="bubble"><img src="public/images/icon-star.svg" alt="A rating star icon"></div>
+      <h1>How did we do?</h1>
+    </div>
+    <div id="message">
+      <p>Please let us know how we did with your support request. All feedback is appreciated to help us improve our offering!</p>
+    </div>
+    <div id="rater">
+      <form action="" method="post" id="rating-form">
+        <div class="ratings-container">
+          <div class="bubble">
+            <input type="radio" id="rating-1" name="rating" value="rating-1">
+            <label for="rating-1"><p class="bold">1</p></label>
+          </div>
+          <div class="bubble">
+            <input type="radio" id="rating-2" name="rating" value="rating-2">
+            <label for="rating-2"><p class="bold">2</p></label>
+          </div>
+          <div class="bubble">
+            <input type="radio" id="rating-3" name="rating" value="rating-3">
+            <label for="rating-3"><p class="bold">3</p></label>
+          </div>
+          <div class="bubble">
+            <input type="radio" id="rating-4" name="rating" value="rating-4">
+            <label for="rating-4"><p class="bold">4</p></label>
+          </div>
+          <div class="bubble">
+            <input type="radio" id="rating-5" name="rating" value="rating-5">
+            <label for="rating-5"><p class="bold">5</p></label>
+          </div>
+        </div>
 
-<!-- <div>
-  <img src="public/images/icon-star.svg" alt="" srcset="">
-  <img src="public/images/illustration-thank-you.svg" alt="" srcset="">
-</div> -->
+        <div class="submit"></div>
+        <input id="submit-button" type="submit" value="submit">
+
+      </form>
+    </div>
+  </main>
+
+
 
 <script src="public/js/index.js"></script>
 </body>
