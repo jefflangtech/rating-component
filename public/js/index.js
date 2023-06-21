@@ -1,0 +1,1 @@
+// Use the .selected class to toggle when a bubble is clicked for the styling

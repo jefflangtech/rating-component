@@ -37,11 +37,11 @@ h1 {
 p {
   font-size: 0.75rem;
   line-height: 1.2rem;
-  color: var(--light-grey);
 }
 p.bold {
   font-size: 0.8rem;
   font-weight: 700;
+  color: inherit;
 }
 button {
   font-size: 0.75rem;
@@ -64,6 +64,7 @@ button {
 body {
   position: relative;
   background-color: var(--dark-blue);
+  color: var(--light-grey);
 }
 main {
   max-width: 20.6rem;
@@ -73,7 +74,6 @@ main {
   margin-inline: auto;
   position: relative;
   transform: translateY(47%);
-  color: var(--white);
   border-radius: 1.5rem;
 }
 #headline {
@@ -86,6 +86,7 @@ main {
 /* Element level styles */
 h1 {
   margin-top: 1.75rem;
+  color: var(--white);
 }
 .ratings-container {
   display: flex;
@@ -106,6 +107,10 @@ h1 {
   border-radius: 1.125rem;
   margin-top: 0.1rem;
 }
+#submit-button:hover {
+  background-color: var(--white);
+  color: var(--primary-orange);
+}
 .ratings-container > .bubble {
   position: relative;
 }
@@ -123,4 +128,10 @@ h1 {
 input,
 .ratings-container .bubble:hover {
   cursor: pointer;
+  background-color: var(--light-grey);
+  color: var(--white);
+}
+.selected {
+  color: var(--white);
+  background-color: var(--primary-orange);
 }
