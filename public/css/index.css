@@ -131,7 +131,7 @@ input,
   background-color: var(--light-grey);
   color: var(--white);
 }
-.selected {
+.bubble-selected {
   color: var(--white);
   background-color: var(--primary-orange);
 }
