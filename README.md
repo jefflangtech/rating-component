@@ -33,7 +33,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
+- Solution URL: [https://www.frontendmentor.io/challenges/interactive-rating-component-koxpeBUmI/hub](https://www.frontendmentor.io/challenges/interactive-rating-component-koxpeBUmI/hub)
 - Live Site URL: [https://jefflangtech.github.io/rating-component/index.html](https://jefflangtech.github.io/rating-component/index.html)
 
 ## My process
