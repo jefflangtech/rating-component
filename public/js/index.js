@@ -39,7 +39,6 @@ const findChildInput = function(parentEl, type) {
 // Function to remove all child elements from within a containing element
 const emptyElement = function(el) {
 
-  console.dir(el);
   while(el.firstChild) {
     el.firstChild.remove();
   }
@@ -116,8 +115,6 @@ ratingDiv.addEventListener('click', (event) => {
 
       emptyElement(mainEl);
       mainEl.appendChild(domFragment);
-
-      // overlay.classList.add('show');
 
     }
   }

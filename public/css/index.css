@@ -29,10 +29,15 @@ p {
   font-size: 0.75rem;
   line-height: 1.2rem;
 }
-p.bold {
+label.bold {
   font-size: 0.8rem;
   font-weight: 700;
   color: inherit;
+}
+fieldset {
+  border: none;
+  padding: 0;
+  margin: 0;
 }
 
 /* Utility classes and shapes */
