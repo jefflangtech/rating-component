@@ -39,6 +39,10 @@ fieldset {
   padding: 0;
   margin: 0;
 }
+legend {
+  visibility: hidden;
+  position: absolute;
+}
 
 /* Utility classes and shapes */
 .bubble {
