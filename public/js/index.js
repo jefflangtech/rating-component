@@ -3,8 +3,6 @@ const ratingDiv = document.getElementById('rater');
 const ratingsBubbles = document.querySelectorAll('.rating-score');
 const submit = document.getElementById('submit-button');
 
-const overlay = document.getElementById('overlay');
-
 // Search an array of elements and return a match if it is the event target
 // or return false. Useful for event delegation.
 const findEventTarget = function(e, elementArray) {
@@ -65,9 +63,10 @@ const createNewElement = function(el, parentEl, options={}) {
 
   return newEl;
 
-}
+};
 
-
+/* This is a beast of a code block to put in an event listener block but I think it serves its purpose. If I was to be building out some more elaborate functional structures I would definitely put this elsewhere, perhaps into a module
+*/
 ratingDiv.addEventListener('click', (event) => {
 
   event.preventDefault();
@@ -78,6 +77,7 @@ ratingDiv.addEventListener('click', (event) => {
       // This only runs when the submit button is clicked and there is a target bubble
       let score = findChildInput(targetBubble, 'radio').value;
 
+      // Response page content creation
       let domFragment = document.createDocumentFragment();
 
       let headlineDiv = createNewElement('div', domFragment, {
@@ -119,8 +119,10 @@ ratingDiv.addEventListener('click', (event) => {
     }
   }
 
+  // Look to see if a bubble was clicked
   let el = findEventTarget(event, ratingsBubbles);
 
+  // Update bubble styling and check the radio input
   if(el) {
     for(let item of ratingsBubbles) {
       if(item != el) {

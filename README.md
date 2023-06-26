@@ -29,13 +29,7 @@ Users should be able to:
 
 ### Screenshot
 
-![](./screenshot.jpg)
-
-Add a screenshot of your solution. The easiest way to do this is to use Firefox to view your project, right-click the page and select "Take a Screenshot". You can choose either a full-height screenshot or a cropped one based on how long the page is. If it's very long, it might be best to crop it.
-
-Alternatively, you can use a tool like [FireShot](https://getfireshot.com/) to take the screenshot. FireShot has a free option, so you don't need to purchase it. 
-
-Then crop/optimize/edit your image however you like, add it to your project, and update the file path in the image above.
+![](./preview.jpg)
 
 ### Links
 
@@ -49,10 +43,11 @@ Then crop/optimize/edit your image however you like, add it to your project, and
 - Semantic HTML5 markup
 - CSS custom properties
 - Flexbox
-- CSS Grid
-- Mobile-first workflow
+- DOM API: DocumentFragment
 
 ### Step by step
+
+Total time: 9:16
 
 1. Initial setup (0:25)
 2. Design system (0:17)
@@ -78,34 +73,46 @@ Let's see if any of this backfires later 😂
 5. Create form and styles (0:33)
 6. Program form functionality (3:34)
 7. Program form response content creation (2:37)
+8. Responsive media queries (0:18)
+9. Validation checks & readme updates (0:36)
 
 
+Some fun little functionality to add a new element to the DOM with some optional attributes
 
-
-To see how you can add code snippets, see below:
-
-```html
-<h1>Some HTML code I'm proud of</h1>
-```
-```css
-.proud-of-this-css {
-  color: papayawhip;
-}
-```
 ```js
-const proudOfThisFunc = () => {
-  console.log('🎉')
-}
+// Function to create new elements in the dom, with optional attributes
+// and append the new element to a specified parent
+const createNewElement = function(el, parentEl, options={}) {
+
+  const newEl = document.createElement(el);
+
+  let elKeys = Object.keys(options);
+
+  if(elKeys.length > 0) {
+
+    for(let k = 0; k < elKeys.length; k++) {
+      newEl.setAttribute(String(elKeys[k]), String(options[elKeys[k]]));
+    }
+
+  }
+
+  parentEl.appendChild(newEl);
+
+  return newEl;
+
+};
 ```
 
 ### Continued development
 
-Use this section to outline areas that you want to continue focusing on in future projects. These could be concepts you're still not completely comfortable with or techniques you found useful that you want to refine and perfect.
+I'm getting closer to the point where I'll want to invest some time into a framework. Now that I am understanding how things are running under the hood, so to speak, by learning things the old-fashioned-vanilla-js way, I am much clearer on the value that frameworks provide.
+
+I am also tempted to start working on my own framework...just because it would be fun, and I also presume it would be an incredible learning experience.
 
 ### Useful resources
 
-- [Example resource 1](https://www.example.com) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
-- [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
+- [ChatGPT](https://chat.openai.com/) - I cannot imagine not having access to a code capable LLM now, not for writing code, but for helping me learn and understand
+- [MDN: DocumentFragment](https://developer.mozilla.org/en-US/docs/Web/API/DocumentFragment) - MDN is my other resource go-to in conjunction with using ChatGPT
 
 ## Author
 
