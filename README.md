@@ -75,6 +75,9 @@ Let's see if any of this backfires later 😂
 
 4. Basic layout with styles (1:20)
   - Planning this all out in advance worked so well. Also using an image overlay of the design as a layer to compare against (I just turned it off and on using a visibility rule) was critical to getting close to pixel perfect
+5. Create form and styles (0:33)
+6. Program form functionality (3:34)
+7. Program form response content creation (2:37)
 
 
 

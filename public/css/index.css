@@ -1,20 +1,11 @@
 /* DESIGN SYSTEM
-  - Basic document styles (line )
-  - Utility classes and shapes
-  - Body & section level styles
-  - Element level styles
-
-
+  - Basic document styles (line 10)
+  - Utility classes and shapes (line 38)
+  - Body & section level styles (line 58)
+  - Element level styles (line 86)
+  - Post-submit dynamic content styles (line 144)
+  - Media queries (line 167)
 */
-
-#overlay {
-  opacity: 0.3;
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index:100;
-  display: none;
-}
 
 /* Basic document styles */
 :root {
@@ -43,11 +34,6 @@ p.bold {
   font-weight: 700;
   color: inherit;
 }
-button {
-  font-size: 0.75rem;
-  line-height: 0.95rem;
-  font-weight: 700;
-}
 
 /* Utility classes and shapes */
 .bubble {
@@ -55,6 +41,15 @@ button {
   height: 2.4rem;
   background-color: var(--med-dark-blue);
   border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.centered {
+  text-align: center;
+  margin-inline: auto;
+}
+.flex-centered {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -67,7 +62,7 @@ body {
   color: var(--light-grey);
 }
 main {
-  max-width: 20.6rem;
+  width: min(calc(100% - 2.4rem), 20.6rem);
   background: radial-gradient(98.96% 98.96% at 50% 0%, #232A34 0%, #181E27 100%);
   padding: 1.6rem;
   padding-right: 1.95rem;
@@ -77,10 +72,15 @@ main {
   border-radius: 1.5rem;
 }
 #headline {
+  min-height: 5.9rem;
   margin-bottom: 0.4rem;
 }
 #message {
+  min-height: 3.1rem;
   margin-bottom: 1.35rem;
+}
+#rater {
+  min-height: 6.35rem;
 }
 
 /* Element level styles */
@@ -139,4 +139,51 @@ input,
 .ratings-container .bubble-selected:hover {
   color: var(--white);
   background-color: var(--primary-orange);
+}
+
+/* Post-submit dynamic content styles */
+.score-message {
+  color: var(--primary-orange);
+  background-color: var(--med-dark-blue);
+  padding-inline: 1rem;
+  padding-top: 0.3rem;
+  padding-bottom: 0.1rem;
+  border-radius: 0.8rem;
+}
+.thank-you {
+  margin-top: 0;
+  margin-bottom: 0.75rem;
+}
+#headline > img {
+  margin-top: 0.75rem;
+}
+#message.post-submit {
+  margin-bottom: 0.8rem;
+}
+#rater.post-submit {
+  padding-bottom: 0.45rem;
+}
+
+/* Media queries */
+@media (max-width: 375px) {
+  main {
+    padding: 1.2rem;
+    padding-bottom: 1.6rem;
+    border-radius: 0.75rem;
+    margin-inline: auto;
+  }
+  h1 {
+    font-size: 1.2rem;
+  }
+  p {
+    font-size: 0.7rem;
+    line-height: 1.1rem;
+  }
+  #submit-button {
+    font-size: 0.7rem;
+  }
+  .bubble {
+    width: 2.1rem;
+    height: 2.1rem;
+  }
 }
